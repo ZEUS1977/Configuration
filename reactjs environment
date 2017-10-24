@@ -1,0 +1,6 @@
+react installation on ubuntu
+
+prerequisiti: node.js
+
+npm install -g babel
+npm install -g babel-cli
