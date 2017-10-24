@@ -2,5 +2,82 @@ react installation on ubuntu
 
 prerequisiti: node.js
 
-npm install -g babel
-npm install -g babel-cli
+sudo npm install -g babel
+sudo npm install -g babel-cli
+
+creare la root del progetto anche come progetto eclipse
+lanciare npm init da shell nella cartella per creare il modulo node
+
+sudo npm install webpack --save
+sudo npm install webpack-dev-server --save
+
+sudo npm install react --save
+sudo npm install react-dom --save
+
+sudo npm install babel-core
+sudo npm install babel-loader
+sudo npm install babel-preset-react
+sudo npm install babel-preset-es2015
+
+nella cartella del progetto creare i seguenti files:
+
+
+index.html
+App.jsx --> Eclipse riconoscerà l'estensione e proporrà un plugin cmoe quello per Angular js
+main.js 
+webpack.config.js
+
+nel file: package.json
+sostituire:     "test": "echo \"Error: no test specified\" && exit 1"
+con: 			 "start": "webpack-dev-server --hot"
+
+per lanciare il server: 
+npm start --hot 	
+hot permette di ricaricare le modifiche a caldo
+
+modificare il file index.html:
+<!DOCTYPE html>
+<html lang = "en">
+
+   <head>
+      <meta charset = "UTF-8">
+      <title>React App</title>
+   </head>
+
+   <body>
+      <div id = "app"></div>
+      <script src = "index.js"></script>
+   </body>
+
+</html>
+
+modificare il file App.gsx:
+
+import React from 'react';
+
+class App extends React.Component {
+   render() {
+      return (
+         <div>
+            Hello World!!!
+         </div>
+      );
+   }
+}
+
+export default App;
+
+modficare il file main.js:
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App.jsx';
+
+ReactDOM.render(<App />, document.getElementById('app'));
+
+startare l'app con:
+
+npm start --hot
+
+
+
