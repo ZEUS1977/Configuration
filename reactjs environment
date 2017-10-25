@@ -80,4 +80,13 @@ startare l'app con:
 npm start --hot
 
 
+COMPONENTE router per gestire links:
+sudo npm install react-router@3.0.5
+sudo npm install react-router-dom
+sudo npm install react-router-native
+
+sui browsers:
+
+Download the new devtools from the Chrome Web Store and on Mozilla Add-ons for Firefox. 
+If you’re developing using React, we highly recommend installing these devtools.
 
