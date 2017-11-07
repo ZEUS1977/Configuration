@@ -1,0 +1,10 @@
+piattaforma sopra ethereum:
+- react native
+- docker
+- lui vorrebbe utilizzare React per il front-end e mobile
+molto probabilmente qualcosa javascript/node.js per back-end
+poi andare su di un framework IBM LoopBack
+pare che si interfacci bene con node
+poi forse utilizzare mongoDB
+dopodiché ci sarà tutta la parte blockchain/ethereum
+e gli smart-contract

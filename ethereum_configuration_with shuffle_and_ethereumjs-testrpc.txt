@@ -1,0 +1,47 @@
+installation on windows
+
+- installare node.js con il file di installazione msi dal sito node.js
+- installare truffle, framework per sviluppare, testare etc, un software in solodity
+	-	con npm install -g truffle
+-creare un progetto:
+ - mkdir myproject
+ - cd myproject 
+ - truffle init
+ - nella sottocartella cotracts verranno creati dei file sol di esempio eliminabili
+- scaricare atom e installarlo per editare i fiel sol
+- per testare un progetto creato con truffle consigliato usare in locale ethereumjs-testrpc, per installarlo:
+	-npm install -g ethereumjs-testrpc
+- per installare il plugin per atom per l'evidenziazione della sintassi di solidity:
+	-apm install language-ethereum 
+		- dalla cartella bin di atom
+- per compilare
+	- truffle compile
+-per testare 
+	- Truffle uses the Mocha testing framework and Chai for assertions
+	- Contract abstractions are the basis for making contract interaction possible from Javascript
+	- scrivere i test in javascritp ed eseguirli con: truffle test
+		- deve essere attivo un ethereum client come ethereumjs-testrpc
+
+-----INSTALLAZIONE ethereumjs-testrpc on windows:
+https://github.com/ethereumjs/testrpc.wiki.git
+ Clone in Desktop
+The TestRPC depends on resources that aren't installed on Windows by default. Before installing via npm, perform the following:
+
+--Install Visual Studio Community Edition. If you choose a custom installation, the bare minimum items that need to be checked are all pertaining to Visual C++.
+--Install the Windows SDK for Windows 8.1
+--Install Python 2.7 if not already installed, and make sure to add its install location to your PATH.
+--Install OpenSSL from here. Make sure to choose the right package for your architecture, and only install the full package (not the light version). You must install OpenSSL at its recommended location - do not change the install path.
+Create a "tmp" directory at the root of your default drive. (Aside: This was old instructions. Can someone verify if this is needed?)
+Afterward, if you're installing the TestRPC globally, run the following in a command prompt:
+
+$ npm install -g ethereumjs-testrpc
+Or, if you've downloaded the source, cd into the directory and run:
+
+$ npm install .
+If you're still having some issues, you might want to install using Windows PowerShell or gitBASH for Windows
+-------------------------------------------------------
+- run javascritpjs-testrpc 
+	- testrpc on powershell
+- run test con shuffle
+	- shuffle test nella cartella dei file di test
+
