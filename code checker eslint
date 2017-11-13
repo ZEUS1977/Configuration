@@ -1,0 +1,6 @@
+sudo  npm install eslint --save-dev;
+sudo ./node_modules/.bin/eslint --init;
+#to analise a file
+./node_modules/.bin/eslint yourfile.js;
+
+

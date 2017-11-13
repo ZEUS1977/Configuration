@@ -1,0 +1,5 @@
+sudo npm install -g loopback-cli
+#per creare un progetto loopback
+lb
+#per startare il server nella cartella del proggetto
+node .
