@@ -1,0 +1,41 @@
+#Per creare un Progetto con shuffle per sviluppare smart contract , testarli, compilarli e
+#deployarli su blockchain o su ethereumjs-testrpc in locale (simulazion di una block chain in locale per non andare in pubblico)
+
+#installare il modulo node di truffle a livello globale
+npm install -g truffle
+#creare un progetto e inizializzarlo con truffle
+truffle init
+
+#per avere una blockchain locale per ethereum e testare gli smart contract installare lvillo globale
+sudo npm install -g ethereumjs-testrpc
+
+#per lanciare la simulazione di block chain locale:
+testrpc
+#verrà mostrata la porta di ascolto
+
+#per copilare i contratti di tets, quello di esempio è in ./contracts:
+truffle compile
+
+#per migrare il contratto atttraverso lo script di migrazione (in ./migrations) verso la blockchain testrpc,
+#far puntare truffle a testrpc locale editando il file truffle.js inquesto modo:
+
+module.exports = {
+  // See <http://truffleframework.com/docs/advanced/configuration>
+  // to cumodule.exports = {
+  networks: {
+    development: {
+      host: "localhost",
+      port: 8545,
+      network_id: "*" // Match any network id
+    }
+  }
+};
+
+e poi lanciare il comando:
+truffle migrate
+
+#lanciare i test con truffle scritti in js nella cartella test con mocha:
+#su ubuntu richiede che venga prima installato:
+sudo apt install biosquid
+#poi si può lanciare
+shuffle test
